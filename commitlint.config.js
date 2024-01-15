@@ -6,7 +6,7 @@ module.exports = {
         'scope-empty': [2, 'always'],
         // 헤더의 길이는 50자로 제한한다.
         'header-max-length': [2, 'always', 50],
-        // 본문의 한 줄은 72자로 제한한다.
+        // 본문의 한 줄은 72자로 제한한다. 
         'body-max-line-length': [2, 'always', 72],
         // 타입은 아래의 태그만 사용하도록 한다.
         'type-enum': [2, 'always', ['feat', 'fix', 'refactor', 'style', 'docs', 'test', 'chore']],
