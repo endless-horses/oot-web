@@ -1,7 +1,6 @@
 import Logo from "@components/logo";
 import Container from "./index.style";
 
-
 interface HeaderProps {
   inversion: boolean;
 }

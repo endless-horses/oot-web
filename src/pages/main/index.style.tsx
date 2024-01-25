@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  border: 1 solid;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(#FFFFFF, #9BA4B4);
