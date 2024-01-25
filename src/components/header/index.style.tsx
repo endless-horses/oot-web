@@ -9,7 +9,7 @@ const Container = styled.div<WrapperProps>`
   height: 100px;
   background-color: ${props => {
     if (props.inversion) {
-      return '#FFFFFF';
+      return 'transparent';
     } else {
       return '#161A2F';
     }
@@ -17,7 +17,7 @@ const Container = styled.div<WrapperProps>`
   display: flex;
   align-items: center;
   padding-left: 120px;
-  font-weight: 500;
+  font-weight: 600;
   
   .title {
     padding: 0 20px;

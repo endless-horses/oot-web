@@ -9,7 +9,7 @@ interface LogoProps {
 }
 
 function Logo(props: LogoProps) {
-  return <Wrapper image={props.inversion ? inversionLogo : defaultLogo} type={props.type} />;
+  return <Wrapper className="logo" image={props.inversion ? inversionLogo : defaultLogo} type={props.type} />;
 }
 
 export default Logo;

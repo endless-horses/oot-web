@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
+import Main from 'pages/main';
 
 function App() {
   return (
     <div className="App">
-      Hello, World!
+      <Main />
     </div>
   );
 }
