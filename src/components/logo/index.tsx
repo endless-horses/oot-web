@@ -1,7 +1,6 @@
-import { Wrapper } from "./index.style";
-import defaultLogo from "@assets/icon/logo-default.svg";
-import inversionLogo from "@assets/icon/logo-inversion.svg";
-
+import { Wrapper } from './index.style';
+import defaultLogo from '@assets/icon/logo-default.svg';
+import inversionLogo from '@assets/icon/logo-inversion.svg';
 
 interface LogoProps {
   inversion: boolean;
