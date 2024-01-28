@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 interface WrapperProps {
-  inversion: boolean;
+  inversion?: string;
 }
 
 const Container = styled.div<WrapperProps>`
   width: 100vw - 20px;
   height: 100px;
   background-color: ${(props) => {
-    if (props.inversion) {
+    if (props.inversion === 'true') {
       return 'transparent';
     } else {
       return '#161A2F';
@@ -22,7 +22,7 @@ const Container = styled.div<WrapperProps>`
     padding: 0 20px;
     font-size: 25px;
     color: ${(props) => {
-      if (props.inversion) {
+      if (props.inversion === 'true') {
         return '#161A2F';
       } else {
         return '#FFFFFF';
@@ -33,7 +33,7 @@ const Container = styled.div<WrapperProps>`
     border-left: thin solid;
     height: 30px;
     color: ${(props) => {
-      if (props.inversion) {
+      if (props.inversion === 'true') {
         return '#161A2F';
       } else {
         return '#FFFFFF';
