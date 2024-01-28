@@ -15,5 +15,5 @@ const patternRequests = {
 };
 
 export const Pattern = {
-  list: (): Promise<PatternData[]> => patternRequests.get<PatternData>(''),
+  list: (): Promise<PatternData[]> => patternRequests.get<PatternData[]>(''),
 };
