@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 90.1vh;
 
   .footer {
     text-align: center;
