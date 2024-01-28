@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
-import { FontData } from './fonts.types';
+import { ColorData } from './color.types';
 
 const instance = axios.create({
-  baseURL: `${process.env.REACT_APP_API_URL}/api/fonts`,
+  baseURL: `${process.env.REACT_APP_API_URL}/api/colors`,
   timeout: 15000,
   withCredentials: true,
 });
@@ -10,10 +10,10 @@ const instance = axios.create({
 const responseBody = (response: AxiosResponse) => response.data;
 // const responseStatus = (response: AxiosResponse) => response.status;
 
-const fontRequests = {
+const colorRequests = {
   get: <T>(url: string) => instance.get<T>(url).then(responseBody),
 };
 
-export const Font = {
-  list: (): Promise<FontData[]> => fontRequests.get<FontData[]>(''),
+export const Color = {
+  list: (): Promise<ColorData[]> => colorRequests.get<ColorData[]>(''),
 };

@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
-import { PatternData } from './patterns.types';
+import { FontData } from './font.types';
 
 const instance = axios.create({
-  baseURL: `${process.env.REACT_APP_API_URL}/api/patterns`,
+  baseURL: `${process.env.REACT_APP_API_URL}/api/fonts`,
   timeout: 15000,
   withCredentials: true,
 });
@@ -10,10 +10,10 @@ const instance = axios.create({
 const responseBody = (response: AxiosResponse) => response.data;
 // const responseStatus = (response: AxiosResponse) => response.status;
 
-const patternRequests = {
+const fontRequests = {
   get: <T>(url: string) => instance.get<T>(url).then(responseBody),
 };
 
-export const Pattern = {
-  list: (): Promise<PatternData[]> => patternRequests.get<PatternData[]>(''),
+export const Font = {
+  list: (): Promise<FontData[]> => fontRequests.get<FontData[]>(''),
 };
