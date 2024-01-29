@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#FFFFFF, #9BA4B4);
+  background: linear-gradient(#ffffff, #9ba4b4);
   font-weight: 700;
-  
+
   .content > .logo {
     float: left;
     margin-left: 220px;
@@ -26,4 +26,4 @@ export const Container = styled.div`
     width: 528px;
     height: 541px;
   }
-`
+`;
