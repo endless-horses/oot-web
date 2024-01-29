@@ -1,7 +1,7 @@
 import Header from '@components/header';
 import { Container } from './index.style';
 import { Pattern } from '@api/pattern';
-import { useEffect, useState } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import { PatternData } from '@api/pattern.types';
 import { Wheel } from '@api/wheel';
 import { WheelData } from '@api/wheel.types';
@@ -15,13 +15,18 @@ import CustomGroup from '@components/custom-group';
 import Button from '@components/button';
 import { useNavigate } from 'react-router';
 
-function CustomList() {
+const CustomList = forwardRef<HTMLDivElement>((props, ref) => {
   const navigate = useNavigate();
   const [patterns, setPatterns] = useState<PatternData[]>([]);
   const [wheels, setWheels] = useState<WheelData[]>([]);
   const [fonts, setFonts] = useState<FontData[]>([]);
   const [colors, setColors] = useState<ColorData[]>([]);
   const [accessories, setAccessories] = useState<AccessoryData[]>([]);
+  const [scroll, setScroll] = useState(0);
+
+  const onScrollFunction = () => {
+    setScroll(window.scrollY);
+  };
 
   useEffect(() => {
     const getData = async () => {
@@ -39,21 +44,19 @@ function CustomList() {
       setAccessories(accessories);
     };
     getData();
-  }, []);
+    onScrollFunction();
+  }, [scroll]);
 
-  console.log(patterns);
-  console.log(wheels);
-  console.log(fonts);
+  // 추후 imageUrl이 반영되면 제거
   console.log(colors);
-  console.log(accessories);
 
   return (
     <>
       <Header />
-      <Container>
-        <CustomGroup name="패턴 디자인" data={wheels} type="small" />
+      <Container onWheel={onScrollFunction} ref={ref}>
+        <CustomGroup name="패턴 디자인" data={patterns} type="small" />
         <CustomGroup name="휠 디자인" data={wheels} type="small" />
-        <CustomGroup name="측면 디자인" data={wheels} type="small" />
+        <CustomGroup name="측면 디자인" data={fonts} type="small" />
         <CustomGroup name="액세서리" data={accessories} type="small" />
         <div className="footer">
           <Button text="타이어 만들기" onClick={() => navigate('/')} />
@@ -61,6 +64,8 @@ function CustomList() {
       </Container>
     </>
   );
-}
+});
+
+CustomList.displayName = 'CustomList';
 
 export default CustomList;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100vw;
-  height: 90.1vh;
+  height: 90vh;
   background: linear-gradient(#ffffff, #9ba4b4);
   font-weight: 700;
   .content {
