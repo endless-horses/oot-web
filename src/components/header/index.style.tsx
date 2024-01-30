@@ -6,7 +6,7 @@ interface WrapperProps {
 
 const Container = styled.div<WrapperProps>`
   width: 100vw - 20px;
-  height: 100px;
+  height: 10vh;
   background-color: ${(props) => {
     if (props.inversion === 'true') {
       return 'transparent';
