@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Main from '@pages/main';
-import CustomPattern from '@pages/custom-pattern';
+import CustomPattern from '@pages/production';
 
 function App() {
   return (

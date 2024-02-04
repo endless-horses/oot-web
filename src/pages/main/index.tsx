@@ -4,7 +4,7 @@ import Logo from '@components/logo';
 import mainImage from '@assets/image/main-tire.png';
 import Icon from '@components/icon';
 import scrollIcon from '@assets/icon/scroll.svg';
-import CustomList from '@pages/custom-list';
+import CustomList from '@pages/item-list';
 import { useEffect, useRef, useState } from 'react';
 
 function Main() {

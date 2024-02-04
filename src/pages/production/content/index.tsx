@@ -1,15 +1,15 @@
-import Preview from '@pages/custom-pattern/preview';
+import Preview from '@pages/production/content/preview';
 import { Container } from './index.style';
-import Summary from '@pages/custom-pattern/summary';
+import Summary from '@pages/production/content/summary';
 import { PatternData } from '@api/pattern.types';
 import { WheelData } from '@api/wheel.types';
 import { AccessoryData } from '@api/accessory.types';
 
-interface ConfigulationProps {
+interface ContentProps {
   data: PatternData | WheelData | AccessoryData;
 }
 
-function TireConfigulation(props: ConfigulationProps) {
+function Content(props: ContentProps) {
   return (
     <Container>
       <Preview />
@@ -18,4 +18,4 @@ function TireConfigulation(props: ConfigulationProps) {
   );
 }
 
-export default TireConfigulation;
+export default Content;

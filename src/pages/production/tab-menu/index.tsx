@@ -1,10 +1,10 @@
 import { Container, Title } from './index.style';
 
-interface ProgressBarProps {
+interface TabMenuProps {
   step: number;
 }
 
-function ProgressBar(props: ProgressBarProps) {
+function TabMenu(props: TabMenuProps) {
   return (
     <>
       <Container>
@@ -17,4 +17,4 @@ function ProgressBar(props: ProgressBarProps) {
   );
 }
 
-export default ProgressBar;
+export default TabMenu;
