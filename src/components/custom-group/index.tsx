@@ -6,14 +6,14 @@ import { Container } from './index.style';
 import CustomItem from '@components/custom-item';
 
 interface CustomGroupProps {
-  name: string;
+  name?: string;
   data: PatternData[] | WheelData[] | FontData[] | AccessoryData[];
   type?: 'small' | 'large';
 }
 
 function CustomGroup(props: CustomGroupProps) {
   return (
-    <Container>
+    <Container className="item_group">
       <div className="title">{props.name}</div>
       {props.data.map((item, index) => (
         <CustomItem key={index} name={item.name} imageSrc={item.imageUrl} type={props.type} />
