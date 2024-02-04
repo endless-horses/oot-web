@@ -10,8 +10,12 @@ interface ContentProps {
 }
 
 function Content(props: ContentProps) {
+  if (!props.data) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <Container>
+    <Container className="content">
       <Preview />
       <Summary data={props.data} />
     </Container>

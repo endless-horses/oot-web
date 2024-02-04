@@ -8,7 +8,7 @@ export const Container = styled.div<ContainerProps>`
   height: 230px;
   background-color: #cdd1d9;
   display: flex;
-  align-items: center; /* 아이템들을 세로축 중앙에 정렬 */
+  align-items: center;
   gap: 50px;
   padding-left: 50px;
   border-radius: ${(props) => {

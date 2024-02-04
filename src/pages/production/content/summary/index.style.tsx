@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-// interface ContainerProps {
-//   name: string;
-//   price: number;
-//   explanation: string;
-// }
-
 export const Name = styled.div`
   font-size: 30px;
   font-weight: 600;

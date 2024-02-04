@@ -5,11 +5,13 @@ import { PatternData } from '@api/pattern.types';
 import { Pattern } from '@api/pattern';
 import TabMenu from './tab-menu';
 import OptionSelector from './option-selector';
+import { selectedPatternIdState } from '@context/pattern';
 import Content from '@pages/production/content';
+import { useRecoilState } from 'recoil';
 
 function CustomPattern() {
-  const [selectedItem, setSelectedItem] = useState<number>(0);
   const [patterns, setPatterns] = useState<PatternData[]>([]);
+  const [selectedItem] = useRecoilState(selectedPatternIdState);
 
   useEffect(() => {
     const getData = async () => {
@@ -19,23 +21,13 @@ function CustomPattern() {
     getData();
   }, []);
 
-  // const handleItemClick = (index: number) => {
-  //   setSelectedItem(index);
-  // };
-
   return (
     <>
       <Container>
         <Header />
-        <TabMenu step={1} />
+        <TabMenu step={0} />
         <Content data={patterns[selectedItem]} />
-        <OptionSelector
-          type="square"
-          data={patterns}
-          onClick={() => {
-            console.log();
-          }}
-        />
+        <OptionSelector type="square" data={patterns} />
       </Container>
     </>
   );

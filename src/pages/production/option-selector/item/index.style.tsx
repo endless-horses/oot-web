@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
 `;
 
 export const ItemImage = styled.img`
