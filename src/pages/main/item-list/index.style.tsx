@@ -4,6 +4,15 @@ export const Container = styled.div`
   width: 100vw;
   height: 90vh;
 
+  .flex_cntr {
+    display: flex;
+    .item_group {
+      border-right: thin solid #969696;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
   .footer {
     width: 100vw;
     height: 80px;
