@@ -1,31 +1,40 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1000px;
   background: linear-gradient(#ffffff, #9ba4b4);
   font-weight: 700;
   .content {
     display: flex;
-  }
-  .logo {
-    margin: 270px 150px;
-  }
-  .title {
-    margin: 280px 20px;
-    font-size: 8cqh;
-  }
-  .image {
-    margin: 100px 80px;
-    width: 528px;
-    height: 541px;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+    .logo {
+    }
+    .title {
+      min-width: 500px;
+      font-size: 80px;
+    }
+    .image {
+      max-width: 500px;
+    }
   }
   .footer {
+    width: 100vw;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
     font-size: 25px;
     font-weight: 200;
+    position: absolute;
+    bottom: -40px;
+    cursor: pointer;
   }
 `;

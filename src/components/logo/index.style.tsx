@@ -7,7 +7,7 @@ interface WrapperProps {
 
 export const Wrapper = styled.div<WrapperProps>`
   background-image: url(${(props) => props.image});
-  width: ${(props) => {
+  min-width: ${(props) => {
     switch (props.type) {
       case 'small':
         return '60px';
@@ -15,7 +15,7 @@ export const Wrapper = styled.div<WrapperProps>`
         return '147px';
     }
   }};
-  height: ${(props) => {
+  min-height: ${(props) => {
     switch (props.type) {
       case 'small':
         return '53px';
