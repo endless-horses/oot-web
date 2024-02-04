@@ -5,6 +5,9 @@ export const Container = styled.div`
   height: 90vh;
 
   .footer {
+    width: 100vw;
+    height: 80px;
     text-align: center;
+    margin-top: calc(20vh - 110px);
   }
 `;

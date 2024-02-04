@@ -5,7 +5,7 @@ interface WrapperProps {
 }
 
 const Container = styled.div<WrapperProps>`
-  min-width: 1200px;
+  min-height: 100px;
   height: 10vh;
   background-color: ${(props) => {
     if (props.inversion === 'true') {

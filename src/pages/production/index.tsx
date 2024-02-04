@@ -1,6 +1,6 @@
 import Header from '@components/header';
 import { Container } from './index.style';
-import CustomGroup from '@components/custom-group';
+import CustomGroup from '@pages/main/item-list/item-group';
 import { useEffect, useState } from 'react';
 import { PatternData } from '@api/pattern.types';
 import { Pattern } from '@api/pattern';

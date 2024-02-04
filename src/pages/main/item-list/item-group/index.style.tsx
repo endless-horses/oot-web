@@ -5,6 +5,7 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
+  min-width: 800px;
   display: flow-root;
   margin-left: 30px;
   margin-top: 15px;

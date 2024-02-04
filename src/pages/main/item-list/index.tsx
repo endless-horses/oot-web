@@ -11,7 +11,7 @@ import { AccessoryData } from '@api/accessory.types';
 import { Font } from '@api/font';
 import { Color } from '@api/color';
 import { Accessory } from '@api/accessory';
-import CustomGroup from '@components/custom-group';
+import CustomGroup from '@pages/main/item-list/item-group';
 import Button from '@components/button';
 import { useNavigate } from 'react-router';
 
@@ -54,10 +54,10 @@ const CustomList = forwardRef<HTMLDivElement>((props, ref) => {
     <>
       <Header />
       <Container onWheel={onScrollFunction} ref={ref}>
-        <CustomGroup name="패턴 디자인" data={patterns} type="small" />
-        <CustomGroup name="휠 디자인" data={wheels} type="small" />
-        <CustomGroup name="측면 디자인" data={fonts} type="small" />
-        <CustomGroup name="액세서리" data={accessories} type="small" />
+        <CustomGroup name="패턴 디자인" data={patterns} />
+        <CustomGroup name="휠 디자인" data={wheels} />
+        <CustomGroup name="측면 디자인" data={fonts} />
+        <CustomGroup name="액세서리" data={accessories} />
         <div className="footer">
           <Button text="타이어 만들기" onClick={() => navigate('/custom')} />
         </div>

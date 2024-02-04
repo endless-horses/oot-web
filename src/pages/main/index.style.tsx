@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 90vh;
+  min-width: 1400px;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1000px;
   background: linear-gradient(#ffffff, #9ba4b4);
   font-weight: 700;
   .content {

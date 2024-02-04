@@ -3,20 +3,19 @@ import { FontData } from '@api/font.types';
 import { PatternData } from '@api/pattern.types';
 import { WheelData } from '@api/wheel.types';
 import { Container } from './index.style';
-import CustomItem from '@components/custom-item';
+import Item from '@pages/main/item-list/item';
 
-interface CustomGroupProps {
+interface ItemGroupProps {
   name?: string;
   data: PatternData[] | WheelData[] | FontData[] | AccessoryData[];
-  type?: 'small' | 'large';
 }
 
-function CustomGroup(props: CustomGroupProps) {
+function CustomGroup(props: ItemGroupProps) {
   return (
     <Container className="item_group">
       <div className="title">{props.name}</div>
       {props.data.map((item, index) => (
-        <CustomItem key={index} name={item.name} imageSrc={item.imageUrl} type={props.type} />
+        <Item key={index} name={item.name} imageSrc={item.imageUrl} />
       ))}
     </Container>
   );
