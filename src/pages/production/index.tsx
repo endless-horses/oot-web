@@ -8,6 +8,7 @@ import OptionSelector from './option-selector';
 import { selectedPatternIdState } from '@context/pattern';
 import Content from '@pages/production/content';
 import { useRecoilState } from 'recoil';
+import ButtonGroup from './button-group';
 
 function CustomPattern() {
   const [patterns, setPatterns] = useState<PatternData[]>([]);
@@ -27,7 +28,10 @@ function CustomPattern() {
         <Header />
         <TabMenu step={0} />
         <Content data={patterns[selectedItem]} />
-        <OptionSelector type="square" data={patterns} />
+        <div className="footer">
+          <OptionSelector type="square" data={patterns} />
+          <ButtonGroup step={0} />
+        </div>
       </Container>
     </>
   );

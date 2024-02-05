@@ -14,6 +14,7 @@ export const Price = styled.div`
 export const Explanation = styled.div`
   font-size: 25px;
   padding: 30px 50px;
+  white-space: pre-wrap;
 `;
 
 export const Container = styled.div`

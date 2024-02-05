@@ -7,6 +7,9 @@ export const Container = styled.div`
   .content {
     flex-grow: 1;
   }
-  .option_selector {
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;

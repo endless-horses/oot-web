@@ -19,7 +19,9 @@ function Summary(props: SummaryProps) {
         <Price>{formatCurrency(props.data.price)}</Price>
       </div>
       <hr className="sep" />
-      <Explanation>{props.data.explanation}</Explanation>
+      <Explanation>
+        <p>{props.data.explanation}</p>
+      </Explanation>
     </Container>
   );
 }
