@@ -20,7 +20,7 @@ function OptionSelector(props: OptionSelectorProps) {
   return (
     <Container className="option_selector" type={props.type}>
       {props.data.map((item, index) => (
-        <Item key={index} name={item.name} imageSrc={item.imageUrl} onClick={() => setSelectedItem(index)} />
+        <Item id={index} key={index} name={item.name} imageSrc={item.imageUrl} onClick={() => setSelectedItem(index)} />
       ))}
     </Container>
   );

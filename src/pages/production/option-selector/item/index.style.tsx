@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
+  .selected {
+    border: 3px solid #0000ff;
+  }
 `;
 
 export const ItemImage = styled.img`
