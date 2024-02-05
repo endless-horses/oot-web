@@ -2,7 +2,7 @@ import Header from '@components/header';
 import { Container } from './index.style';
 import Logo from '@components/logo';
 import mainImage from '@assets/image/main-tire.png';
-import CustomList from '@pages/main/item-list';
+import ItemList from '@pages/main/item-list';
 import { useEffect, useRef, useState } from 'react';
 import ScrollIcon from '@pages/main/scroll-icon';
 
@@ -43,7 +43,7 @@ function Main() {
           <ScrollIcon />
         </div>
       </Container>
-      <CustomList ref={wheel} />
+      <ItemList ref={wheel} />
     </>
   );
 }
