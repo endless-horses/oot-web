@@ -1,7 +1,7 @@
 import { Container, Title } from './index.style';
 
 interface TabMenuProps {
-  step: 0 | 1 | 2 | 3;
+  step: number;
 }
 
 function TabMenu(props: TabMenuProps) {

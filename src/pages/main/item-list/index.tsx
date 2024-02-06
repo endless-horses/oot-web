@@ -59,7 +59,7 @@ const CustomList = forwardRef<HTMLDivElement>((props, ref) => {
         </div>
         <ItemGroup name="액세서리" data={accessories} />
         <div className="footer">
-          <Button text="타이어 만들기" onClick={() => navigate('/production')} />
+          <Button text="타이어 만들기" onClick={() => navigate('/production?step=0')} />
         </div>
       </Container>
     </>
