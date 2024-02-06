@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
-interface ContainerProps {
-  type?: 'small' | 'large';
-}
-
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div`
+  min-width: 660px;
   display: flow-root;
   margin-left: 30px;
   margin-top: 15px;

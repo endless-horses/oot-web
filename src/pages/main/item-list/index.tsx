@@ -11,7 +11,7 @@ import { AccessoryData } from '@api/accessory.types';
 import { Font } from '@api/font';
 import { Color } from '@api/color';
 import { Accessory } from '@api/accessory';
-import CustomGroup from '@components/custom-group';
+import ItemGroup from '@pages/main/item-list/item-group';
 import Button from '@components/button';
 import { useNavigate } from 'react-router';
 
@@ -47,19 +47,19 @@ const CustomList = forwardRef<HTMLDivElement>((props, ref) => {
     onScrollFunction();
   }, [scroll]);
 
-  // 추후 imageUrl이 반영되면 제거
-  console.log(colors);
-
   return (
     <>
       <Header />
       <Container onWheel={onScrollFunction} ref={ref}>
-        <CustomGroup name="패턴 디자인" data={patterns} type="small" />
-        <CustomGroup name="휠 디자인" data={wheels} type="small" />
-        <CustomGroup name="측면 디자인" data={fonts} type="small" />
-        <CustomGroup name="액세서리" data={accessories} type="small" />
+        <ItemGroup name="패턴 디자인" data={patterns} />
+        <ItemGroup name="휠 디자인" data={wheels} />
+        <div className="flex_cntr">
+          <ItemGroup name="측면 디자인" data={fonts} />
+          <ItemGroup name="색상" data={colors} type="circle" />
+        </div>
+        <ItemGroup name="액세서리" data={accessories} />
         <div className="footer">
-          <Button text="타이어 만들기" onClick={() => navigate('/')} />
+          <Button text="타이어 만들기" onClick={() => navigate('/production')} />
         </div>
       </Container>
     </>

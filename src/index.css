@@ -2,4 +2,6 @@ body {
   margin: 0;
   font-family: 'pretendard';
   color: #161A2F;
+  min-width: 1400px;
+  min-height: 600px;
 }

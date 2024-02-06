@@ -1,12 +1,12 @@
 import { Container } from './index.style';
 
-interface CustomItemProps {
+interface ItemProps {
   name: string;
   imageSrc?: string;
-  type?: 'small' | 'large';
+  type?: 'square' | 'circle';
 }
 
-function CustomItem(props: CustomItemProps) {
+function Item(props: ItemProps) {
   return (
     <Container className="item" type={props.type}>
       <img className="item_image" src={props.imageSrc} alt={props.name + '-image'}></img>
@@ -15,4 +15,4 @@ function CustomItem(props: CustomItemProps) {
   );
 }
 
-export default CustomItem;
+export default Item;

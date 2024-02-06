@@ -2,10 +2,9 @@ import Header from '@components/header';
 import { Container } from './index.style';
 import Logo from '@components/logo';
 import mainImage from '@assets/image/main-tire.png';
-import Icon from '@components/icon';
-import scrollIcon from '@assets/icon/scroll.svg';
-import CustomList from '@pages/custom-list';
+import ItemList from '@pages/main/item-list';
 import { useEffect, useRef, useState } from 'react';
+import ScrollIcon from '@pages/main/scroll-icon';
 
 function Main() {
   const [scroll, setScroll] = useState(0);
@@ -27,6 +26,10 @@ function Main() {
     }
   };
 
+  const clickFunction = () => {
+    wheel.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <Header inversion></Header>
@@ -36,11 +39,11 @@ function Main() {
           <div className="title">Outfit Of Tire</div>
           <img className="image" src={mainImage} alt="tire_example" />
         </div>
-        <div className="footer">
-          <Icon icon={scrollIcon} text="Scroll" />
+        <div className="footer" onClick={clickFunction}>
+          <ScrollIcon />
         </div>
       </Container>
-      <CustomList ref={wheel} />
+      <ItemList ref={wheel} />
     </>
   );
 }
