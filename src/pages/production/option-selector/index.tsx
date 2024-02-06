@@ -7,6 +7,8 @@ import { Container } from './index.style';
 import Item from './item';
 import { useRecoilState } from 'recoil';
 import { selectedPatternIdState } from '@context/pattern';
+import { useSearchParams } from 'react-router-dom';
+import { selectedWheelIdState } from '@context/wheel';
 
 interface OptionSelectorProps {
   type: 'square' | 'circle';
@@ -15,12 +17,28 @@ interface OptionSelectorProps {
 }
 
 function OptionSelector(props: OptionSelectorProps) {
-  const [, setSelectedItem] = useRecoilState(selectedPatternIdState);
+  const [searchParams] = useSearchParams();
+  const [, setSelectedPattern] = useRecoilState(selectedPatternIdState);
+  const [, setSelectedWheel] = useRecoilState(selectedWheelIdState);
+  const step: number = Number(searchParams.get('step'));
 
   return (
     <Container className="option_selector" type={props.type}>
       {props.data.map((item, index) => (
-        <Item id={index} key={index} name={item.name} imageSrc={item.imageUrl} onClick={() => setSelectedItem(index)} />
+        <Item
+          id={index}
+          key={index}
+          name={item.name}
+          imageSrc={item.imageUrl}
+          onClick={() => {
+            {
+              step === 0 && setSelectedPattern(index);
+            }
+            {
+              step === 1 && setSelectedWheel(index);
+            }
+          }}
+        />
       ))}
     </Container>
   );
