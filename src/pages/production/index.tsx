@@ -72,6 +72,7 @@ function CustomPattern() {
               <div className="side_cntr">
                 <OptionSelector shape="circle" data={'font'} />
                 <OptionSelector shape="circle" data={'color'} />
+                <div>&nbsp;</div>
               </div>
             )}
             {step === 3 && <OptionSelector shape="square" data={'accessory'} />}

@@ -43,7 +43,7 @@ export const ItemImage = styled.img<ItemImageProps>`
   }};
   margin: ${(props) => {
     if (props.type === 'circle') {
-      return '10px';
+      return '10px 18px';
     }
   }};
 `;

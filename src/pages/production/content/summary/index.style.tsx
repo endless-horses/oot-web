@@ -30,4 +30,10 @@ export const Container = styled.div`
   height: 450px;
   border-radius: 50px;
   background-color: #f1f6f9;
+  .font_example {
+    border: 1px solid #000000;
+    background-color: gray;
+    font-size: 90px;
+    font-weight: 600;
+  }
 `;
