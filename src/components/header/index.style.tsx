@@ -18,6 +18,11 @@ const Container = styled.div<WrapperProps>`
   align-items: center;
   padding-left: 120px;
   font-weight: 600;
+  .link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
   .title {
     padding: 0 20px;
     font-size: 25px;
