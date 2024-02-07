@@ -10,7 +10,7 @@ export const Container = styled.div<ContainerProps>`
   flex-direction: column;
   height: ${(props) => {
     if (props.type === 'circle') {
-      return '350px';
+      return '300px';
     } else {
       return '230px';
     }
