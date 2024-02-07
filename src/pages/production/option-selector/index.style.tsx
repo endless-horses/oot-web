@@ -10,15 +10,18 @@ export const Container = styled.div<ContainerProps>`
   flex-direction: column;
   height: ${(props) => {
     if (props.type === 'circle') {
-      return '300px';
+      return '350px';
     } else {
       return '230px';
     }
   }};
   background-color: #cdd1d9;
   align-items: center;
-  gap: 20px;
-  padding-left: 50px;
+  gap: 10px;
+  padding: 0 50px;
+  margin-right: ${(props) => {
+    return props.type === 'circle' ? '50px' : '0px';
+  }};
   border-radius: ${(props) => {
     if (props.type === 'circle') {
       return '25px';
@@ -27,9 +30,17 @@ export const Container = styled.div<ContainerProps>`
     }
   }};
   .item_group {
+    text-align: left;
     display: flex;
     flex-direction: row;
     gap: 50px;
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 `;
 

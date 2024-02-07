@@ -24,6 +24,7 @@ function OptionSelector(props: OptionSelectorProps) {
     <Container className="option_selector" type={props.shape}>
       {props.data === 'font' ? <Title className="title">폰트</Title> : null}
       {props.data === 'color' ? <Title className="title">색상</Title> : null}
+      {(props.data === 'font' || props.data === 'color') && <div className="divider" />}
       <div className="item_group">
         {data.map((item, index) => (
           <Item

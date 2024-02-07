@@ -4,13 +4,14 @@ import { useNavigate } from 'react-router';
 
 interface ButtonGroupProps {
   step: number;
+  position?: 'default' | 'absolute';
 }
 
 function ButtonGroup(props: ButtonGroupProps) {
   const navigate = useNavigate();
 
   return (
-    <Container>
+    <Container className="button_group" position={props.position}>
       {props.step > 0 ? (
         <Button text="이전" inversion onClick={() => navigate(`/production?step=${props.step - 1}`)} />
       ) : (
