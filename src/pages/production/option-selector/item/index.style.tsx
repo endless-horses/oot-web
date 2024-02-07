@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface ItemImageProps {
+  type?: 'square' | 'circle';
+}
+
 export const Container = styled.div`
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
@@ -8,10 +12,40 @@ export const Container = styled.div`
   }
 `;
 
-export const ItemImage = styled.img`
-  border: 1px solid #000000;
-  width: 120px;
-  height: 120px;
+export const ItemImage = styled.img<ItemImageProps>`
+  border: ${(props) => {
+    if (props.type === 'circle') {
+      return 'none';
+    } else {
+      return '1px solid #000000;';
+    }
+  }};
+  border-radius: ${(props) => {
+    if (props.type === 'circle') {
+      return '50%';
+    } else {
+      return 'none;';
+    }
+  }};
+  width: ${(props) => {
+    if (props.type === 'circle') {
+      return '80px';
+    } else {
+      return '120px;';
+    }
+  }};
+  height: ${(props) => {
+    if (props.type === 'circle') {
+      return '80px';
+    } else {
+      return '120px;';
+    }
+  }};
+  margin: ${(props) => {
+    if (props.type === 'circle') {
+      return '15px';
+    }
+  }};
 `;
 
 export const ItemName = styled.p`
