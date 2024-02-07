@@ -33,7 +33,7 @@ export const Container = styled.div`
   .font_example {
     border: 1px solid #000000;
     background-color: gray;
-    font-size: 90px;
+    font-size: 70px;
     font-weight: 600;
   }
 `;

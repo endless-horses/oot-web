@@ -60,7 +60,10 @@ function Summary() {
           </div>
           <hr className="sep" />
           <Explanation>
-            <p className="font_example" style={{ color: color[selectedColor].name }}>
+            <p
+              className="font_example"
+              style={{ color: color[selectedColor].name, fontFamily: font[selectedFont].name }}
+            >
               Outfit Of Tire
             </p>
           </Explanation>
