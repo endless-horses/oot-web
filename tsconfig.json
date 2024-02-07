@@ -25,7 +25,8 @@
       "@components/*": ["./components/*"],
       "@pages/*": ["./pages/*"],
       "@api/*": ["./api/*"],
-      "@context/*": ["./context/*"]
+      "@context/*": ["./context/*"],
+      "@hooks/*": ["./hooks/*"]
     }
   },
   "include": [
