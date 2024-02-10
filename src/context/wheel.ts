@@ -1,6 +1,6 @@
 import { atom } from 'recoil';
 
-export const selectedWheelIdState = atom<number>({
+export const selectedWheelState = atom<number>({
   key: 'selectedWheelIdState',
   default: 0,
 });

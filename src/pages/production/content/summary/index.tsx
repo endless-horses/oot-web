@@ -1,11 +1,11 @@
 import useCustomData from '@hooks/useCustomData';
 import { Container, Explanation, Name, Price } from './index.style';
 import { useSearchParams } from 'react-router-dom';
-import { selectedPatternIdState } from '@context/pattern';
+import { selectedPatternState } from '@context/pattern';
 import { useRecoilState } from 'recoil';
-import { selectedWheelIdState } from '@context/wheel';
-import { selectedFontIdState } from '@context/font';
-import { selectedColorIdState } from '@context/color';
+import { selectedWheelState } from '@context/wheel';
+import { selectedFontState } from '@context/font';
+import { selectedColorState } from '@context/color';
 
 function formatCurrency(price: number) {
   return '+ ' + price.toLocaleString('ko-KR') + '원';
@@ -15,10 +15,10 @@ function Summary() {
   const [searchParams] = useSearchParams();
   const step: number = Number(searchParams.get('step'));
   const { pattern, wheel, font, color, accessory } = useCustomData();
-  const [selectedPattern] = useRecoilState(selectedPatternIdState);
-  const [selectedWheel] = useRecoilState(selectedWheelIdState);
-  const [selectedFont] = useRecoilState(selectedFontIdState);
-  const [selectedColor] = useRecoilState(selectedColorIdState);
+  const [selectedPattern] = useRecoilState(selectedPatternState);
+  const [selectedWheel] = useRecoilState(selectedWheelState);
+  const [selectedFont] = useRecoilState(selectedFontState);
+  const [selectedColor] = useRecoilState(selectedColorState);
 
   if (!pattern.length || !wheel.length || !font.length || !color.length || !accessory.length) {
     return <div>Loading...</div>;

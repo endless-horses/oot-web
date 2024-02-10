@@ -1,9 +1,9 @@
 import { useRecoilState } from 'recoil';
 import { Container, ItemImage, ItemName } from './index.style';
-import { selectedPatternIdState } from '@context/pattern';
-import { selectedWheelIdState } from '@context/wheel';
-import { selectedColorIdState } from '@context/color';
-import { selectedFontIdState } from '@context/font';
+import { selectedPatternState } from '@context/pattern';
+import { selectedWheelState } from '@context/wheel';
+import { selectedFontState } from '@context/font';
+import { selectedColorState } from '@context/color';
 
 interface ItemProps {
   id: number;
@@ -14,10 +14,10 @@ interface ItemProps {
 }
 
 function Item(props: ItemProps) {
-  const [selectedPattern] = useRecoilState(selectedPatternIdState);
-  const [selectedWheel] = useRecoilState(selectedWheelIdState);
-  const [selectedFont] = useRecoilState(selectedFontIdState);
-  const [selectedColor] = useRecoilState(selectedColorIdState);
+  const [selectedPattern] = useRecoilState(selectedPatternState);
+  const [selectedWheel] = useRecoilState(selectedWheelState);
+  const [selectedFont] = useRecoilState(selectedFontState);
+  const [selectedColor] = useRecoilState(selectedColorState);
 
   return (
     <Container className="item_cntr" onClick={props.onClick}>
