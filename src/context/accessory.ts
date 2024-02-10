@@ -1,6 +1,6 @@
 import { atom } from 'recoil';
 
-export const selectedAccessoryState = atom<number[]>({
+export const selectedAccessoryState = atom<number>({
   key: 'selectedAccessoryState',
-  default: [],
+  default: 0,
 });
