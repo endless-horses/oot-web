@@ -6,6 +6,7 @@ import { useRecoilState } from 'recoil';
 import { selectedWheelState } from '@context/wheel';
 import { selectedFontState } from '@context/font';
 import { selectedColorState } from '@context/color';
+import { selectedAccessoryState } from '@context/accessory';
 
 function formatCurrency(price: number) {
   return '+ ' + price.toLocaleString('ko-KR') + '원';
@@ -19,6 +20,7 @@ function Summary() {
   const [selectedWheel] = useRecoilState(selectedWheelState);
   const [selectedFont] = useRecoilState(selectedFontState);
   const [selectedColor] = useRecoilState(selectedColorState);
+  const [selectedAccessory] = useRecoilState(selectedAccessoryState);
 
   if (!pattern.length || !wheel.length || !font.length || !color.length || !accessory.length) {
     return <div>Loading...</div>;
@@ -66,6 +68,19 @@ function Summary() {
             >
               Outfit Of Tire
             </p>
+          </Explanation>
+        </Container>
+      );
+    case 3:
+      return (
+        <Container className="summary">
+          <div className="top">
+            <Name>{accessory[selectedAccessory].name}</Name>
+            <Price>{formatCurrency(accessory[selectedAccessory].price)}</Price>
+          </div>
+          <hr className="sep" />
+          <Explanation>
+            <p>{accessory[selectedAccessory].explanation}</p>
           </Explanation>
         </Container>
       );
