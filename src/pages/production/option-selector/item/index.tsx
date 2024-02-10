@@ -4,6 +4,7 @@ import { selectedPatternState } from '@context/pattern';
 import { selectedWheelState } from '@context/wheel';
 import { selectedFontState } from '@context/font';
 import { selectedColorState } from '@context/color';
+import { selectedAccessoryState } from '@context/accessory';
 
 interface ItemProps {
   id: number;
@@ -18,6 +19,7 @@ function Item(props: ItemProps) {
   const [selectedWheel] = useRecoilState(selectedWheelState);
   const [selectedFont] = useRecoilState(selectedFontState);
   const [selectedColor] = useRecoilState(selectedColorState);
+  const [selectedAccessory] = useRecoilState(selectedAccessoryState);
 
   return (
     <Container className="item_cntr" onClick={props.onClick}>
@@ -36,6 +38,9 @@ function Item(props: ItemProps) {
           src={props.imageSrc}
           type="circle"
         />
+      )}
+      {props.data === 'accessory' && (
+        <ItemImage className={`item_image ${selectedAccessory === props.id ? 'selected' : ''}`} src={props.imageSrc} />
       )}
       <ItemName className="item_name">{props.name}</ItemName>
     </Container>

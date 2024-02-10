@@ -6,6 +6,7 @@ import { selectedPatternState } from '@context/pattern';
 import { selectedWheelState } from '@context/wheel';
 import { selectedFontState } from '@context/font';
 import { selectedColorState } from '@context/color';
+import { selectedAccessoryState } from '@context/accessory';
 
 interface OptionSelectorProps {
   shape: 'square' | 'circle';
@@ -18,6 +19,7 @@ function OptionSelector(props: OptionSelectorProps) {
   const [, setSelectedWheel] = useRecoilState(selectedWheelState);
   const [, setSelectedFont] = useRecoilState(selectedFontState);
   const [, setSelectedColor] = useRecoilState(selectedColorState);
+  const [, setSelectedAccessory] = useRecoilState(selectedAccessoryState);
   const data = getData(props.data);
 
   return (
@@ -45,6 +47,9 @@ function OptionSelector(props: OptionSelectorProps) {
               }
               {
                 props.data === 'color' && setSelectedColor(index);
+              }
+              {
+                props.data === 'accessory' && setSelectedAccessory(index);
               }
             }}
           />
