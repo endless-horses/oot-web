@@ -20,7 +20,7 @@ function ButtonGroup(props: ButtonGroupProps) {
       <Button
         text={props.step < 3 ? '다음 단계로' : '결과 확인하기'}
         onClick={() => {
-          if (props.step < 2) navigate(`/production?step=${props.step + 1}`);
+          if (props.step < 3) navigate(`/production?step=${props.step + 1}`);
         }}
       />
     </Container>
