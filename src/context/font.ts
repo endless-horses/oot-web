@@ -1,6 +1,6 @@
 import { atom } from 'recoil';
 
-export const selectedFontIdState = atom<number>({
+export const selectedFontState = atom<number>({
   key: 'selectedFontIdState',
   default: 0,
 });

@@ -1,9 +1,5 @@
 import Logo from '@components/logo';
 import Container from './index.style';
-import { useRecoilState } from 'recoil';
-import { selectedPatternIdState } from '@context/pattern';
-import { selectedWheelIdState } from '@context/wheel';
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
 interface HeaderProps {
@@ -12,13 +8,6 @@ interface HeaderProps {
 
 function Header(props: HeaderProps) {
   const navigate = useNavigate();
-  const [, setSelectedPattern] = useRecoilState(selectedPatternIdState);
-  const [, setSelectedWheel] = useRecoilState(selectedWheelIdState);
-
-  useEffect(() => {
-    setSelectedPattern(0);
-    setSelectedWheel(0);
-  }, []);
 
   return (
     <Container inversion={props.inversion ? 'true' : 'false'}>

@@ -1,11 +1,12 @@
 import { Container, Title } from './index.style';
 import Item from './item';
 import { useRecoilState } from 'recoil';
-import { selectedPatternIdState } from '@context/pattern';
-import { selectedWheelIdState } from '@context/wheel';
 import useCustomData from 'hooks/useCustomData';
-import { selectedFontIdState } from '@context/font';
-import { selectedColorIdState } from '@context/color';
+import { selectedPatternState } from '@context/pattern';
+import { selectedWheelState } from '@context/wheel';
+import { selectedFontState } from '@context/font';
+import { selectedColorState } from '@context/color';
+import { selectedAccessoryState } from '@context/accessory';
 
 interface OptionSelectorProps {
   shape: 'square' | 'circle';
@@ -14,10 +15,11 @@ interface OptionSelectorProps {
 }
 
 function OptionSelector(props: OptionSelectorProps) {
-  const [, setSelectedPattern] = useRecoilState(selectedPatternIdState);
-  const [, setSelectedWheel] = useRecoilState(selectedWheelIdState);
-  const [, setSelectedFont] = useRecoilState(selectedFontIdState);
-  const [, setSelectedColor] = useRecoilState(selectedColorIdState);
+  const [, setSelectedPattern] = useRecoilState(selectedPatternState);
+  const [, setSelectedWheel] = useRecoilState(selectedWheelState);
+  const [, setSelectedFont] = useRecoilState(selectedFontState);
+  const [, setSelectedColor] = useRecoilState(selectedColorState);
+  const [, setSelectedAccessory] = useRecoilState(selectedAccessoryState);
   const data = getData(props.data);
 
   return (
@@ -45,6 +47,9 @@ function OptionSelector(props: OptionSelectorProps) {
               }
               {
                 props.data === 'color' && setSelectedColor(index);
+              }
+              {
+                props.data === 'accessory' && setSelectedAccessory(index);
               }
             }}
           />
