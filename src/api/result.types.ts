@@ -4,7 +4,7 @@ import { FontData } from './font.types';
 import { PatternData } from './pattern.types';
 import { WheelData } from './wheel.types';
 
-export interface ResultData {
+export interface PostResultBody {
   patternId: number;
   wheelId: number;
   fontId: number;
@@ -12,11 +12,11 @@ export interface ResultData {
   accessoryId: number;
 }
 
-export interface PostResultBody {
+export interface ResultInfo {
   id: string;
 }
 
-export interface ResultInfo {
+export interface ResultData {
   id: string;
   pattern: PatternData;
   wheel: WheelData;
