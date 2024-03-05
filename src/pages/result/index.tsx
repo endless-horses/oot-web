@@ -23,7 +23,7 @@ function Result() {
           <Button inversion onClick={() => navigate('/')} text="처음으로" />
           <Button
             onClick={() => {
-              navigator.clipboard.writeText(`http://www.outfitoftire.co.kr/${location.pathname}`);
+              navigator.clipboard.writeText(`http://www.outfitoftire.co.kr${location.pathname}`);
               alert('주소가 복사되었습니다.');
             }}
             text="공유하기"
