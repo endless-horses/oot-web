@@ -37,8 +37,10 @@ function Summary() {
     <div className="sumary">
       <div className="t1">
         <p>견적 요약</p>
-        <p className="small">예상 견적 금액</p>
-        <p>{formatCurrency(sum)}</p>
+        <div>
+          <p className="small">예상 견적 금액</p>
+          <p>{formatCurrency(sum)}</p>
+        </div>
       </div>
       <div>
         <div className="t2">
